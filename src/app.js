@@ -1,21 +1,5 @@
-import {Component, Template, bootstrap} from 'angular2/angular2';
-import {bind} from 'angular2/di';
-
-@Component({
-  selector: 'yeoman'
-})
-
-@Template({
-  url: 'yeoman.html'
-})
-
-class Yeoman {
-
-  constructor() {
-    console.log('component mounted');
-  }
-
-}
+import {bootstrap} from 'angular2/angular2';
+import {Yeoman} from 'components/yeoman/yeoman';
 
 export function main() {
   bootstrap(Yeoman);
