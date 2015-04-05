@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yeoman</title>
+  </head>
+  <body>
+
+    <yeoman>Loading...</yeoman>
+
+    <script src="lib/system.js"></script>
+    <script src="lib/zone.js"></script>
+
+    <script>
+      System.config({
+        baseURL: 'lib/',
+        paths: {
+          'angular2/*': 'angular2.js',
+          'rx/dist/rx.all': 'rx.all.js',
+          'index': '../index.js'
+        }
+      });
+
+      System.import('index').then(function(module) {
+        module.main();
+      }, console.log.bind(console));
+    </script>
+
+  </body>
+</html>
