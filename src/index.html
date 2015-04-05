@@ -15,15 +15,15 @@
 
     <script>
       System.config({
-        baseURL: 'lib/',
+        baseURL: '/',
         paths: {
-          'angular2/*': 'angular2.js',
-          'rx/dist/rx.all': 'rx.all.js',
-          'index': '../index.js'
+          'angular2/*': 'lib/angular2.js',
+          'rx/dist/rx.all': 'lib/rx.all.js',
+          'app': 'app.js'
         }
       });
 
-      System.import('index').then(function(module) {
+      System.import('app').then(function(module) {
         module.main();
       }, console.log.bind(console));
     </script>
