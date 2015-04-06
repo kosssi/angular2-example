@@ -1,4 +1,6 @@
 import {Component, Template} from 'angular2/angular2';
+import {Sharepear} from 'components/sharepear/sharepear';
+import {Inject} from 'angular2/di';
 
 @Component({
   selector: 'yeoman'
@@ -9,7 +11,8 @@ import {Component, Template} from 'angular2/angular2';
 })
 
 export class Yeoman {
-  constructor() {
-    console.log('component mounted');
+  constructor(@Inject(Sharepear)sharepear:Sharepear) {
+    console.log('component yeoman mounted');
+    this.name = 'sharepear';
   }
 }
